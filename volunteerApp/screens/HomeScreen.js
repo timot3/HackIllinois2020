@@ -1,6 +1,6 @@
-import * as React from 'react';
-import { Image, Platform, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-import { ScrollView } from 'react-native-gesture-handler';
+import React, { useState } from 'react';
+import { Image, Platform, StyleSheet, Text, TouchableOpacity, View, ScrollView } from 'react-native';
+// import { ScrollView } from 'react-native-gesture-handler';
 import * as WebBrowser from 'expo-web-browser';
 
 import { MonoText } from '../components/StyledText';
@@ -18,7 +18,7 @@ export default function HomeScreen() {
 
   return (
     <View style={styles.container}>
-      <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
+      <ScrollView>
         {/* <View style={styles.welcomeContainer}>
           <Image
             source={
@@ -58,6 +58,14 @@ export default function HomeScreen() {
           <MonoText style={styles.codeHighlightText}>navigation/BottomTabNavigator.js</MonoText>
         </View>
       </View> */}
+
+      { events.map((item) => {
+        return (
+          <View key={item.key}>
+            <Text style={style.item}>{item.event}</Text>
+          </View>
+        )
+      })}
 
       
 
@@ -189,5 +197,11 @@ const styles = StyleSheet.create({
   helpLinkText: {
     fontSize: 14,
     color: '#2e78b7',
+  },
+  item: {
+    marginTop: 24,
+    padding: 30,
+    backgroundColor: 'green',
+    fontSize: 20
   },
 });
