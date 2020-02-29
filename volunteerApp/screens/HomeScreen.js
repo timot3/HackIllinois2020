@@ -13,6 +13,8 @@ export default function HomeScreen() {
     { event: 'event4', key: '4' },
     { event: 'event5', key: '5' },
     { event: 'event6', key: '6' },
+    { event: 'event7', key: '7' },
+    { event: 'event8', key: '8' },
 
   ]);
 
@@ -62,7 +64,7 @@ export default function HomeScreen() {
       { events.map((item) => {
         return (
           <View key={item.key}>
-            <Text style={style.item}>{item.event}</Text>
+            <Text style={styles.item}>{item.event}</Text>
           </View>
         )
       })}
@@ -115,6 +117,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
+    paddingHorizontal: 20
   },
   // developmentModeText: {
   //   marginBottom: 20,
@@ -201,7 +204,7 @@ const styles = StyleSheet.create({
   item: {
     marginTop: 24,
     padding: 30,
-    backgroundColor: 'green',
+    backgroundColor: '#eee',
     fontSize: 20
   },
 });
