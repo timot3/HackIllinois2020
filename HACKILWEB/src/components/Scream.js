@@ -30,7 +30,7 @@ class Scream extends Component {
     return (
         <Card className={classes.card}>
             <CardContent className={classes.content}>
-                <Typography variant='h3' color='textSecondary' component={Link} to={`/location/locations/${locationId}`}>{title}</Typography>
+                <Typography variant='h4' color='textSecondary' component={Link} to={`/location/locations/${locationId}`}>{title}</Typography>
                 <Typography variant='h5' component={Link} to={`/users/${userHandle}`} color='primary'>{userHandle}</Typography>
                 <Typography variant='body2' color='textSecondary'>{dayjs(createdAt).fromNow()}</Typography>
                 <Typography variant='body1'>{body.length > 400 ? body.substring(0, 400) + "..." : body.substring(0, 400)}</Typography>
