@@ -22,6 +22,9 @@ class home extends Component {
             this.state.screams.map(scream => <Scream key={scream.screamId} scream={scream}/>)
         ) : (<p>Loading...</p>);
 
+        document.body.style.backgroundSize = "cover";
+        document.body.style.backgroundImage = "url('https://c4.wallpaperflare.com/wallpaper/602/823/707/abstract-geometry-minimalism-wallpaper-preview.jpg')";
+
         return (
         <Grid container spacing={16}>
             <Grid item sm={8} xs={12}>

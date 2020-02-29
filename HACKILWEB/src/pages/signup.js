@@ -98,10 +98,10 @@ class signup extends Component {
                     <img src={AppIcon} alt='iconImg' className={classes.image}/>
                     <Typography variant='h2' className={classes.pageTitle}>Signup</Typography>
                     <form noValidate onSubmit={this.handleSubmit}>
-                        <TextField id='email' name='email' type='email' label='email' className={classes.textField} helperText={errors.email} error={errors.email ? true : false} value={this.state.email} onChange={this.handleChange} fullWidth/>
-                        <TextField id='password' name='password' type='password' label='password' className={classes.textField} helperText={errors.password} error={errors.password ? true : false} value={this.state.password} onChange={this.handleChange} fullWidth/>
-                        <TextField id='confirmPassword' name='confirmPassword' type='password' label='confirmPassword' className={classes.textField} helperText={errors.confirmPassword} error={errors.confirmPassword ? true : false} value={this.state.confirmPassword} onChange={this.handleChange} fullWidth/>
-                        <TextField id='handle' name='handle' type='text' label='handle' className={classes.textField} helperText={errors.handle} error={errors.handle ? true : false} value={this.state.handle} onChange={this.handleChange} fullWidth/>
+                        <TextField id='email' name='email' type='email' label='Email' className={classes.textField} helperText={errors.email} error={errors.email ? true : false} value={this.state.email} onChange={this.handleChange} fullWidth/>
+                        <TextField id='password' name='password' type='password' label='Password' className={classes.textField} helperText={errors.password} error={errors.password ? true : false} value={this.state.password} onChange={this.handleChange} fullWidth/>
+                        <TextField id='confirmPassword' name='confirmPassword' type='password' label='Confirm Password' className={classes.textField} helperText={errors.confirmPassword} error={errors.confirmPassword ? true : false} value={this.state.confirmPassword} onChange={this.handleChange} fullWidth/>
+                        <TextField id='handle' name='handle' type='text' label='Handle' className={classes.textField} helperText={errors.handle} error={errors.handle ? true : false} value={this.state.handle} onChange={this.handleChange} fullWidth/>
 
                         {errors.general && (
                             <Typography variant='body2' className={classes.customError}>
