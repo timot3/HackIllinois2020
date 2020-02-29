@@ -6,6 +6,16 @@ import * as WebBrowser from 'expo-web-browser';
 import { MonoText } from '../components/StyledText';
 
 export default function HomeScreen() {
+  const [events, setEvents] = useState([
+    { event: 'event1', key: '1' },
+    { event: 'event2', key: '2' },
+    { event: 'event3', key: '3' },
+    { event: 'event4', key: '4' },
+    { event: 'event5', key: '5' },
+    { event: 'event6', key: '6' },
+
+  ]);
+
   return (
     <View style={styles.container}>
       <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
@@ -48,6 +58,9 @@ export default function HomeScreen() {
           <MonoText style={styles.codeHighlightText}>navigation/BottomTabNavigator.js</MonoText>
         </View>
       </View> */}
+
+      
+
       </ScrollView>
     </View>
   );
