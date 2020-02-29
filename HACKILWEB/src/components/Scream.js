@@ -73,14 +73,15 @@ import MoreVertIcon from '@material-ui/icons/MoreVert';
 
 const useStyles = makeStyles(theme => ({
     main: {
-        marginBottom: 50
+        marginBottom: 50,
+        display: 'flex',
     },
   root: {
     maxWidth: '100%',
   },
   media: {
     height: 0,
-    paddingTop: 50, // 16:9
+    paddingTop: 0, // 16:9
   },
   expand: {
     transform: 'rotate(0deg)',
@@ -105,7 +106,7 @@ export default function Scream(props) {
   console.log(props.title);
 
  // const {no, scream:{body, createdAt, title, userHandle, locationId}} = this.props;
- const { bad, scream : { body, address, title, coordintaor, date, locationId } } = props;
+ const { bad, scream : { body, address, title, coordinator, date, locationId, email, signUpAmnt } } = props;
 
     //const temp = this.props.title;
   const handleExpandClick = () => {
@@ -118,7 +119,7 @@ export default function Scream(props) {
       <CardHeader
         avatar={
           <Avatar aria-label="recipe" className={classes.avatar}>
-            R
+            {coordinator.substring(0,1).toUpperCase()}
           </Avatar>
         }
         action={
@@ -159,9 +160,24 @@ export default function Scream(props) {
       </CardActions>
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>
-          <Typography paragraph>More Info:</Typography>
+          <Typography header>Full Description:</Typography>
           <Typography paragraph>
             {body}
+          </Typography>
+          <br></br>
+          <Typography header>Address:</Typography>
+          <Typography paragraph>
+            {address}
+          </Typography>
+          <br></br>
+          <Typography header>Coodinator:</Typography>
+          <Typography paragraph>
+            {coordinator} ({email})
+          </Typography>
+          <br></br>
+          <Typography header>Signed up users:</Typography>
+          <Typography paragraph>
+            {signUpAmnt}
           </Typography>
         </CardContent>
       </Collapse>
