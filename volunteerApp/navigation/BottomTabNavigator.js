@@ -1,11 +1,11 @@
 import * as React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import TabBarIcon from '../components/TabBarIcon';
-import HostScreen from '../screens/HostScreen';
+import HostingScreen from '../screens/HostingScreen';
 import VolunteerScreen from '../screens/VolunteerScreen';
 
 const BottomTab = createBottomTabNavigator();
-const INITIAL_ROUTE_NAME = 'Home';
+const INITIAL_ROUTE_NAME = 'Volunteer';
 
 export default function BottomTabNavigator({ navigation, route }) {
   // Set the header title on the parent stack navigator depending on the
@@ -17,9 +17,9 @@ export default function BottomTabNavigator({ navigation, route }) {
     <BottomTab.Navigator initialRouteName={INITIAL_ROUTE_NAME}>
       <BottomTab.Screen
         name="Host"
-        component={HostScreen}
+        component={HostingScreen}
         options={{
-          title: 'Home',
+          title: 'Host',
           tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="md-code-working" />,
         }}
       />
@@ -33,7 +33,7 @@ export default function BottomTabNavigator({ navigation, route }) {
       />
       <BottomTab.Screen
         name="Log"
-        component={HostScreen}
+        component={HostingScreen}
         options={{
           title: 'Log Hours',
           tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="md-code-working" />,
@@ -51,7 +51,7 @@ function getHeaderTitle(route) {
       return 'Host An Event';
     case 'Volunteer':
       return 'Select An Event Near You';
-  case 'Log':
+    case 'Log':
     return 'Log Your Hours';
   }
 }
