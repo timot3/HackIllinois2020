@@ -5,7 +5,7 @@ import * as WebBrowser from 'expo-web-browser';
 
 import { MonoText } from '../components/StyledText';
 
-export default function HomeScreen() {
+export default function HostScreen() {
   const [events, setEvents] = useState([
     { event: 'event1', key: '1' },
     { event: 'event2', key: '2' },
@@ -76,7 +76,7 @@ export default function HomeScreen() {
   );
 }
 
-HomeScreen.navigationOptions = {
+HostScreen.navigationOptions = {
   header: null,
 };
 
