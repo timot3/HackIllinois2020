@@ -3,7 +3,7 @@
 ## A Simple to use API to find volunteer events
 
 ## Info
-Main site: http://volunteerhelper.tk/
+Main site: http://www.volunteerconnect.tk/
 
 An open source project. MIT license. Made during HackIllinois 2020.
 
@@ -11,7 +11,7 @@ An open source project. MIT license. Made during HackIllinois 2020.
 ## Layout of Repo
 * `FirebaseFunctions` contains all functions used on our Firebase backend. This includes all POST and GET requests.
 
-* `mainSite` contains the code for our informational website found at http://volunteerhelper.tk/ .
+* `mainSite` contains the code for our informational website found at http://www.volunteerconnect.tk/ .
 
 * `sampleUsage` contains a sample use case of our API on a site designed for users to sign up to attend volunteering events, get in contact with coordinators, track their hours, and more. It is written using React, an open source web framework, and is currently still a work in progress.
 
