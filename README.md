@@ -5,7 +5,7 @@
 ## Info
 Main site: http://volunteerhelper.tk/
 
-An open source project. Made for HackIllinois 2020.
+An open source project. MIT license. Made during HackIllinois 2020.
 
 
 ## Layout of Repo
@@ -19,4 +19,4 @@ An open source project. Made for HackIllinois 2020.
 
 
 ## Documentation
-Check out `documentation` file for more info about this API and how to use it.
+Check out [`documentation`](documentation.MD) file for more info about this API and how to use it.
