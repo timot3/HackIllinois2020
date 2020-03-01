@@ -1,1 +1,22 @@
 # HackIllinois2020
+
+## A Simple to use API to find volunteer events
+
+## Info
+Main site: http://volunteerhelper.tk/
+
+An open source project. Made for HackIllinois 2020.
+
+
+## Layout of Repo
+* `FirebaseFunctions` contains all functions used on our Firebase backend. This includes all POST and GET requests.
+
+* `mainSite` contains the code for our informational website found at http://volunteerhelper.tk/ .
+
+* `sampleUsage` contains a sample use case of our API on a site designed for users to sign up to attend volunteering events, get in contact with coordinators, track their hours, and more. It is written using React, an open source web framework, and is currently still a work in progress.
+
+* 'volunteerApp' is a sample usage of our API in an app format. It is still very much in progress. Essentially, its a mobile version of our `sampleUsage` website written using React Native, an open source mobile framework.
+
+
+## Documentation
+Check out `documentation` file for more info about this API and how to use it.
