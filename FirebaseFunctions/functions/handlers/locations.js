@@ -7,19 +7,16 @@ exports.getAllLocations = (req, res) => {
             locations.push({
                 locationId: doc.id,
                 email: doc.data().email,
-                lat: doc.data().lat,
-                long: doc.data().long,
+                address: doc.data().address,
                 title: doc.data().title,
                 coordinator: doc.data().coordinator,
                 body: doc.data().body,
-                day: doc.data().day,
-                time: doc.data().time,
-                length: doc.data().length,
+                date: doc.data().date,
                 tags: doc.data().tags,
                 signUpAmnt: doc.data().signUpAmnt
             });
         });
-
+        
         return res.json(locations);
     }).catch(err => console.error(err));
 };
@@ -30,14 +27,11 @@ exports.postOneLocation = (req, res) => {
 
     const newLocation = {
         email: req.user.email,
-        lat: req.body.lat,
-        long: req.body.long,
+        address: req.body.address,
         title: req.body.title,
         coordinator: req.user.handle,
         body: req.body.body,
-        day: req.body.day,
-        time: req.body.time,
-        length: req.body.length,
+        date: req.body.date,
         tags: req.body.tags,
         signUpAmnt: req.body.signUpAmnt
     };
