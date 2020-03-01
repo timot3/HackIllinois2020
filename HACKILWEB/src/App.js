@@ -8,6 +8,7 @@ import jwtDecode from 'jwt-decode';
 import home from './pages/home';
 import signup from './pages/signup';
 import login from './pages/login';
+import host from './pages/host';
 import Navbar from './components/Navbar';
 import AuthRoute from './util/AuthRoute';
 import locations from './pages/locations';
@@ -57,6 +58,8 @@ function App() {
               <Route exact path="/" component={home}/>
               <AuthRoute exact path="/login" component={login} authenticated={authenticated}/>
               <AuthRoute exact path="/signup" component={signup} authenticated={authenticated}/>
+              <AuthRoute exact path="/host" component={host} authenticated={authenticated}/>
+
             </Switch>
           </div>
         </Router>

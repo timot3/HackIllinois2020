@@ -47,8 +47,10 @@ class login extends Component {
     constructor() {
         super();
         this.state = {
-            email: '',
-            password: '',
+            address: '',
+            body: '',
+            tags: '',
+            title: '',
             errors: {},
         };
     }
@@ -60,8 +62,11 @@ class login extends Component {
         // });
 
         const userData = {
-            email: this.state.email,
-            password: this.state.password
+            address: this.state.address,
+            body: this.state.body,
+            tags: this.state.tags,
+            title: this.state.title,
+
         };
 
         this.props.loginUser(userData, this.props.history);
@@ -95,11 +100,12 @@ class login extends Component {
             <Grid container className={classes.form}>
                 <Grid item sm/>
                 <Grid item sm>
-                    <img src={AppIcon} alt='iconImg' className={classes.image}/>
-                    <Typography variant='h2' className={classes.pageTitle}>Login</Typography>
+                    <Typography variant='h2' className={classes.pageTitle}>Host An Event</Typography>
                     <form noValidate onSubmit={this.handleSubmit}>
-                        <TextField id='email' name='email' type='email' label='email' className={classes.textField} helperText={errors.email} error={errors.email ? true : false} value={this.state.email} onChange={this.handleChange} fullWidth/>
-                        <TextField id='password' name='password' type='password' label='password' className={classes.textField} helperText={errors.password} error={errors.password ? true : false} value={this.state.password} onChange={this.handleChange} fullWidth/>
+                        <TextField id='title' name='title' type='title' label='title' className={classes.textField} helperText={errors.title} error={errors.title ? true : false} value={this.state.title} onChange={this.handleChange} fullWidth/>
+                        <TextField id='address' name='address' type='address' label='address' className={classes.textField} helperText={errors.address} error={errors.address ? true : false} value={this.state.address} onChange={this.handleChange} fullWidth/>
+                        <TextField id='body' name='body' type='body' label='body' className={classes.textField} helperText={errors.body} error={errors.body ? true : false} value={this.state.body} onChange={this.handleChange} fullWidth multiline/>
+                        <TextField id='tags' name='tags' type='tags' label='tags' className={classes.textField} helperText={errors.tags} error={errors.tags ? true : false} value={this.state.tags} onChange={this.handleChange} fullWidth/>
                         {errors.general && (
                             <Typography variant='body2' className={classes.customError}>
                                 {errors.general}
