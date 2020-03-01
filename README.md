@@ -17,6 +17,8 @@ An open source project. MIT license. Made during HackIllinois 2020.
 
 * 'volunteerApp' is a sample usage of our API in an app format. It is still very much in progress. Essentially, its a mobile version of our `sampleUsage` website written using React Native, an open source mobile framework.
 
+* `reactComponent` contains code for our custom React component published to NPM. This can be easily implemented in your own React projects by simply running the command `npm i volunteer-connect-get-all` and then importing it into your desired .js file. Currently it provides a list view of all volunteering events currently in the database, but we hope to expand its functionality in the future. 
+
 
 ## Documentation
 Check out [`documentation`](documentation.MD) file for more info about this API and how to use it.

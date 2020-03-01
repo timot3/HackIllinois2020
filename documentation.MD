@@ -128,3 +128,7 @@ axios.get('/locations').then(res => {
       "comments": []
   }
   ```
+
+## React Component
+
+Our React component can be easily added to your own project by simply running the command `npm i volunteer-connect-get-all` and importing it into whatever .js file you desire. It creates a list view of all current volunteering events in our database. Due to the limited time we had, this part of our project is still quite unpolished and thus don't expect it to work completely as intended. We hope to expand its functionality in the near future. 
