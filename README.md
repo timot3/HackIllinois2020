@@ -21,4 +21,4 @@ An open source project. MIT license. Made during HackIllinois 2020.
 
 
 ## Documentation
-Check out [`documentation`](documentation.MD) file for more info about this API and how to use it.
+Check out [`documentation`](Documentation.md) file for more info about this API and how to use it.
