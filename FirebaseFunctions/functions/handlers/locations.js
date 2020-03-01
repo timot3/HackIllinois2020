@@ -55,7 +55,7 @@ exports.getLocation = (req, res) => {
 
         locationData = doc.data();
         locationData.locationId = doc.id;
-        return db.collection('locations').where('locationId', '==', req.params.locationId).get();
+        return db.collection('locations').orderBy('date', 'desc').where('locationId', '==', req.params.locationId).get();
     }).then(data => {
         locationData.comments = [];
         data.forEach(doc => {
